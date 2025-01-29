@@ -2,6 +2,7 @@
 
 require_relative "arubos/version"
 
+# Arubos module
 module Arubos
   class Error < StandardError; end
 
