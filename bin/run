@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "arubos"
+
+default_name = "dev"
+
+# Allow additional arguments to be passed
+name = ARGV.empty? ? default_name : ARGV
+
+# Run with the arguments
+exit Arubos.run(name: name)

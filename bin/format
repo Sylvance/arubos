@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "rubocop"
+
+# Default arguments for rubocop formatting
+default_args = %w[--autocorrect-all]
+
+# Allow additional arguments to be passed to rubocop
+args = ARGV.empty? ? default_args : ARGV
+
+# Run RuboCop with the arguments
+exit RuboCop::CLI.new.run(args)
